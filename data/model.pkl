@@ -1,0 +1,16 @@
+python
+import pickle
+import os
+
+# Define the directory path for the data folder
+data_dir = os.path.join(os.getcwd(), 'data')
+
+# Define the file path for the model file
+model_file_path = os.path.join(data_dir, 'model.pkl')
+
+# Create an empty object for the model
+model = {}
+
+# Pickle the model object to the file
+with open(model_file_path, 'wb') as f:
+    pickle.dump(model, f)
