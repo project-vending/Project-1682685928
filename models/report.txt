@@ -1,0 +1,13 @@
+python
+import os
+
+# Define the root directory
+root_dir = os.getcwd()
+
+# Define the file path to create
+file_path = os.path.join(root_dir, 'models', 'report.txt')
+
+# Create the file if it doesn't exist
+if not os.path.exists(file_path):
+    with open(file_path, 'w') as f:
+        f.write('This is the report file for the time series analysis dashboard.\n')
