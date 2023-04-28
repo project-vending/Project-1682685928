@@ -1,0 +1,23 @@
+python
+import os
+import pickle
+
+# Define the root directory
+root_dir = os.getcwd()
+
+# Define the reports directory
+reports_dir = os.path.join(root_dir, 'reports')
+
+# Create the reports directory if it doesn't exist
+if not os.path.exists(reports_dir):
+    os.makedirs(reports_dir)
+
+# Define the path to the model pickle file
+model_path = os.path.join(reports_dir, 'model.pkl')
+
+# Create an empty model
+model = {}
+
+# Save the model to the pickle file
+with open(model_path, 'wb') as f:
+    pickle.dump(model, f)
