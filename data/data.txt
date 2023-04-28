@@ -1,0 +1,9 @@
+python
+import os
+
+# Define the file path
+file_path = os.path.join(os.getcwd(), 'data', 'data.txt')
+
+# Create the file
+with open(file_path, 'w') as f:
+    f.write('This is a sample data file.')
