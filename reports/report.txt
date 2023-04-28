@@ -1,0 +1,15 @@
+python
+import os
+
+# Define the directory where the report.txt file should be created
+dir_path = os.path.join(os.getcwd(), 'reports')
+
+# Define the path to the report.txt file
+file_path = os.path.join(dir_path, 'report.txt')
+
+# Create the report.txt file if it doesn't exist
+if not os.path.exists(file_path):
+    with open(file_path, 'w') as f:
+        f.write('This is a report file\n')
+        f.write('Add your report content here!\n')
+        f.write('You can use this file to summarize your time series analysis dashboard results\n')
