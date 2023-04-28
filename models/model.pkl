@@ -1,0 +1,16 @@
+python
+import pickle
+from sklearn.ensemble import RandomForestRegressor
+
+# Load data and prepare X and y variables
+# X = ...
+# y = ...
+
+# Create and train a random forest regression model
+model = RandomForestRegressor()
+model.fit(X, y)
+
+# Save the model as a pickle file in the models folder
+model_filepath = "models/model.pkl"
+with open(model_filepath, "wb") as f:
+    pickle.dump(model, f)
