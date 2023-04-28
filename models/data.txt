@@ -1,0 +1,13 @@
+python
+import os
+
+# Define the file path
+file_path = os.path.join(os.getcwd(), 'models', 'data.txt')
+
+# Open the file in read mode
+with open(file_path, 'r') as f:
+    # Read the contents of the file
+    contents = f.read()
+
+# Print the contents of the file
+print(contents)
