@@ -1,0 +1,20 @@
+python
+import os
+
+# Define the root directory
+root_dir = os.getcwd()
+
+# Define the subdirectories to be created
+subdirs = ['data', 'models', 'reports']
+
+# Loop through the subdirectories and create them if they don't exist
+for subdir in subdirs:
+    dir_path = os.path.join(root_dir, subdir)
+    if not os.path.exists(dir_path):
+        os.makedirs(dir_path)
+
+# Create the report.txt file in the data directory
+data_path = os.path.join(root_dir, 'data')
+report_file = os.path.join(data_path, 'report.txt')
+with open(report_file, 'w') as f:
+    f.write('This is a sample report.\n')
